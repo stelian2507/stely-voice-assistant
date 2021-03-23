@@ -9,7 +9,6 @@ recognition.maxAlternative=1;
 
 const synth=window.speechSynthesis;
 
-
 startButton.addEventListener("click", () =>{
     recognition.start();
 });
@@ -28,6 +27,13 @@ recognition.onresults=(e) => {
         recognition.stop();
         utter.text="Hi, how are you?";
         synth.speak(utter);
-        console.log("hi, how are you?");
+        console.log("Hi, how are you?");
+   }
+   else if (transcript==="goodbye")
+   {
+       recognition.stop();
+       utter.text="Okay bye, See you soon";
+       synth.speak(utter);
+       console.log("Okay bye, See you soon");
    }
 }
