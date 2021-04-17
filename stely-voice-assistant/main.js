@@ -18,7 +18,6 @@ utter.onend=()=>{
     recognition.start();
 };
 
-
 recognition.onresults=(e) => {
     const transcript=e.results[e.results.length-1][0].transcript.trim();
 
